@@ -1,8 +1,8 @@
 <?php
 
 $url = $_SERVER['REQUEST_URI'];
-include 'head.php';
-include 'menu.php';
+include 'telas/head.php';
+include 'telas/menu.php';
 include 'acoes.php';
 
 match($url){
@@ -14,4 +14,4 @@ match($url){
     default => erro404(),
 };
 
-include 'footer.php';
+include 'telas/footer.php';

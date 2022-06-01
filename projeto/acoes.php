@@ -2,30 +2,30 @@
 
 function login()
 {
-    include 'login.php';
+    include 'telas/login.php';
 }
 
 function cadastro()
 {
-    include 'cadastro.php';
+    include 'telas/cadastro.php';
 }
 
 function home()
 {
-    include 'home.php';
+    include 'telas/home.php';
 }
 
 function listar()
 {
-    include 'listar.php';
+    include 'telas/listar.php';
 }
 
 function erro404()
 {
-    include '404.php';
+    include 'telas/404.php';
 }
 
 function relatorio()
 {
-    include 'relatorio.php';
+    include 'telas/relatorio.php';
 }
