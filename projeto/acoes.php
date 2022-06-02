@@ -7,7 +7,21 @@ function login()
 
 function cadastro()
 {
-    include 'telas/cadastro.php';
+    if ($_POST) {
+
+
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
+
+        $arquivo = fopen('dados/contatos.csv','a+');
+
+
+        fwrite($arquivo, "{$nome};{$email};{$telefone}" . PHP_EOL);
+        fclose($arquivo);
+        echo "Cadastro realizado com sucesso !";
+    }
+         include 'telas/cadastro.php';
 }
 
 function home()
@@ -18,10 +32,9 @@ function home()
 function listar()
 {
     $contatos = file('dados/contatos.csv');
-    
+
 
     include 'telas/listar.php';
-    
 }
 
 function erro404()
