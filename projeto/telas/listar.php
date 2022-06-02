@@ -17,7 +17,7 @@
         foreach ($contatos as $cadaContato) {
             $partes = explode(';', $cadaContato);
 
-            print_r($partes);
+            
           
 
             echo '<tr>';
