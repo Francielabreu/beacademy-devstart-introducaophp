@@ -1,6 +1,6 @@
 <?php
 
-$url = $_SERVER['REQUEST_URI'];
+$url =$_SERVER['REQUEST_URI'];
 include 'telas/head.php';
 include 'telas/menu.php';
 include 'acoes.php';

@@ -1,7 +1,3 @@
-<?php
-include 'head.php';
-?>
-
 <h1>Cadastro</h1>
 
 <hr>
