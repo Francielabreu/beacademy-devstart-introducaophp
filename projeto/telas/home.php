@@ -1,6 +1,6 @@
     <h1>Pagina Inicial</h1>
     <hr>
 
-    <div class="" style="background-color:green ;">
+    <div class="alert alert-primary">
         Bem vindo a pagina inicial
     </div>

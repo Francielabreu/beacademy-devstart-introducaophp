@@ -1,5 +1,6 @@
 <?php
 
+
 function login()
 {
     include 'telas/login.php';
@@ -19,7 +20,9 @@ function cadastro()
 
         fwrite($arquivo, "{$nome};{$email};{$telefone}" . PHP_EOL);
         fclose($arquivo);
-        echo "Cadastro realizado com sucesso !";
+
+        $messagem ='Cadastro realizado com sucesso !';
+        include 'telas/mensagem.php';
     }
          include 'telas/cadastro.php';
 }
@@ -45,4 +48,21 @@ function erro404()
 function relatorio()
 {
     include 'telas/relatorio.php';
+}
+
+function excluir()
+{
+    $id = $_GET['id'];
+    $contatos = file('dados/contatos.csv');
+    unset($contatos[$id]);
+
+    unlink('dados/contatos.csv');
+    $arquivo = fopen('dados/contatos.csv', 'a+');
+    foreach ($contatos as $cadaContato) {
+        fwrite($arquivo, $cadaContato);
+    }
+
+    $messagem = 'Contato excluido com sucesso!';
+    include 'telas/mensagem.php';
+   
 }
