@@ -13,6 +13,7 @@ match($url[0]){
     '/cadastro' => cadastro(),
     '/listar' => listar(),
     '/relatorio' => relatorio(),
+    '/editar' => editar(),
     '/excluir' => excluir(),
     default => erro404(),
 };
