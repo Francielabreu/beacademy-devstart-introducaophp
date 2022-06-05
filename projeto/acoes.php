@@ -21,7 +21,7 @@ function cadastro()
         fwrite($arquivo, "{$nome};{$email};{$telefone}" . PHP_EOL);
         fclose($arquivo);
 
-        $messagem ='Cadastro realizado com sucesso !';
+        $mensagem ='Cadastro realizado com sucesso !';
         include 'telas/mensagem.php';
     }
          include 'telas/cadastro.php';
@@ -62,7 +62,7 @@ function excluir()
         fwrite($arquivo, $cadaContato);
     }
 
-    $messagem = 'Contato excluido com sucesso!';
+    $mensagem = 'Contato excluido com sucesso!';
     include 'telas/mensagem.php';
    
 }
